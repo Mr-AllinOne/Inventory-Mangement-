@@ -1,4 +1,4 @@
-# MawuliShop
+# inventory management system
 # Overview
 This is an inventory management system for both the admin and the attendant. This is basically for monitoring sales, keeping track of items and processing purchases
 
