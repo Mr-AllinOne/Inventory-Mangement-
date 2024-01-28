@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D02E9630-3E35-4A2F-B5D0-863D516BA468}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Shop</RootNamespace>
+    <AssemblyName>Shop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\Bunifu_UI_WinForms_5.0.3 [Programs.TheMicroTech.Net]\Bunifu_UI_WinForms_5.0.3 [Programs.TheMicroTech.Net]\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\Bunifu_UI_WinForms_5.0.3 [Programs.TheMicroTech.Net]\Bunifu_UI_WinForms_5.0.3 [Programs.TheMicroTech.Net]\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\Guna.UI2\Guna.UI2\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attendants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendants.Designer.cs">
+      <DependentUpon>Attendants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="db.cs" />
+    <Compile Include="Design\Cate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Cate.Designer.cs">
+      <DependentUpon>Cate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Dashbord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Dashbord.Designer.cs">
+      <DependentUpon>Dashbord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\dataGridss.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\dataGridss.Designer.cs">
+      <DependentUpon>dataGridss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Histo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Histo.Designer.cs">
+      <DependentUpon>Histo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Workcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Workcs.Designer.cs">
+      <DependentUpon>Workcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Zero.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Zero.Designer.cs">
+      <DependentUpon>Zero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\ProductSale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\ProductSale.Designer.cs">
+      <DependentUpon>ProductSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\SalersEmp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\SalersEmp.Designer.cs">
+      <DependentUpon>SalersEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\userTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\userTable.Designer.cs">
+      <DependentUpon>userTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms.Designer.cs">
+      <DependentUpon>Forms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellingForm.Designer.cs">
+      <DependentUpon>SellingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Attendants.resx">
+      <DependentUpon>Attendants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Cate.resx">
+      <DependentUpon>Cate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Dashbord.resx">
+      <DependentUpon>Dashbord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\dataGridss.resx">
+      <DependentUpon>dataGridss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Histo.resx">
+      <DependentUpon>Histo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Workcs.resx">
+      <DependentUpon>Workcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Zero.resx">
+      <DependentUpon>Zero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\ProductSale.resx">
+      <DependentUpon>ProductSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\SalersEmp.resx">
+      <DependentUpon>SalersEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\userTable.resx">
+      <DependentUpon>userTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms.resx">
+      <DependentUpon>Forms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SellingForm.resx">
+      <DependentUpon>SellingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-pixabay-268819.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\night.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-product-category-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-category.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-98.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-981.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor-1307227_1280.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
